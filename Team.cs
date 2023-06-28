@@ -25,7 +25,7 @@ namespace ClassPractice
         public void addMember(string memberName) {
             //add team member to roster
             for (var index = 0; index < roster.Length; ++index) {
-                if (roster[index].Equals("")) {
+                if (roster[index] == null) {
                     roster[index] = memberName;
                     return;
                 }
@@ -54,9 +54,9 @@ namespace ClassPractice
 
         public void printRoster() {
             string teamLineUp = string.Format("Team name: {0} \n Captain: {1}", name, captain);
-            for (int index = 0; index < roster.Length; ++index) {
-                if (!roster[index].Equals("")) {
-                    teamLineUp += "\n   " + "roster[index]";
+            for (int index = 1; index < roster.Length; ++index) {
+                if (roster[index] != null) {
+                    teamLineUp += "\n   " + roster[index];
                         }
             }
             Console.WriteLine(teamLineUp);

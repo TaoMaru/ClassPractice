@@ -48,7 +48,7 @@ namespace ClassPractice
             team1.addMember("Usopp");
             team1.addMember("Sanji");
             team1.setStatus(TeamStatus.Active);
-            switch (team1.getStatus) {
+            switch (team1.getStatus()) {
                 case TeamStatus.Active:
                     team1.printRoster();
                     break;
@@ -56,7 +56,19 @@ namespace ClassPractice
                     Console.WriteLine("Team DQ\'d");
                     break;
             }
-            
+
+            var team2 = new Team();
+            team2.setStatus(TeamStatus.Disqualified);
+
+            switch (team2.getStatus())
+            {
+                case TeamStatus.Active:
+                    team2.printRoster();
+                    break;
+                case TeamStatus.Disqualified:
+                    Console.WriteLine("Team DQ\'d");
+                    break;
+            }
         }
     }
 }
