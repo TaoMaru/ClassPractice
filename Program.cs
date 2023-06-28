@@ -40,6 +40,7 @@ namespace ClassPractice
             Console.WriteLine((TeamStatus)statusID); //team status as "Active"
 
             //use Team obj:
+            //Team 1:
             var team1 = new Team();
             team1.assignCaptain("Luffy");
             team1.updateName("The Straw Hats");
@@ -57,6 +58,7 @@ namespace ClassPractice
                     break;
             }
 
+            //Team 2:
             var team2 = new Team();
             team2.setStatus(TeamStatus.Disqualified);
 
