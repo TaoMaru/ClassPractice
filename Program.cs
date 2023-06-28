@@ -38,6 +38,9 @@ namespace ClassPractice
             Console.WriteLine((int)teamAStatus); //team status as ID "1"
             var statusID = 3; // given a status ID...
             Console.WriteLine((TeamStatus)statusID); //team status as "Active"
+
+            //use Team obj:
+
         }
     }
 }
