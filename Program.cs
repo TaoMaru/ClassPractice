@@ -40,7 +40,23 @@ namespace ClassPractice
             Console.WriteLine((TeamStatus)statusID); //team status as "Active"
 
             //use Team obj:
-
+            var team1 = new Team();
+            team1.assignCaptain("Luffy");
+            team1.updateName("The Straw Hats");
+            team1.addMember("Zoro");
+            team1.addMember("Nami");
+            team1.addMember("Usopp");
+            team1.addMember("Sanji");
+            team1.setStatus(TeamStatus.Active);
+            switch (team1.getStatus) {
+                case TeamStatus.Active:
+                    team1.printRoster();
+                    break;
+                case TeamStatus.Disqualified:
+                    Console.WriteLine("Team DQ\'d");
+                    break;
+            }
+            
         }
     }
 }
